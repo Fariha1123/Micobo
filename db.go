@@ -5,11 +5,6 @@ import (
 	"database/sql"
     _ "github.com/lib/pq"
 )
-// const (
-//     DB_USER     = "postgres"
-//     DB_PASSWORD = "Ping_Pong"
-//     DB_NAME     = "postgres"
-// )
 
 // DB set up
 func setupDB() *sql.DB {
@@ -17,7 +12,6 @@ func setupDB() *sql.DB {
     fmt.Println(dbinfo)
 
     db, err := sql.Open("postgres", dbinfo)
-    //db, err := sql.Open("postgres", cfg.FormatDSN())
     checkErr(err)
 
     return db
